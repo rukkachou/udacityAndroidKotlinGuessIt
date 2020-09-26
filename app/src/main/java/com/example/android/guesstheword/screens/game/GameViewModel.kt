@@ -47,7 +47,6 @@ class GameViewModel : ViewModel() {
     val currentTime: LiveData<Long>
         get() = _currentTime
 
-
     // The current word
     private val _word = MutableLiveData<String>()
     val word: LiveData<String>
@@ -85,6 +84,7 @@ class GameViewModel : ViewModel() {
                 _eventGameFinish.value = true
             }
         }
+
         timer.start()
     }
 
